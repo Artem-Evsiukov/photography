@@ -1,8 +1,17 @@
 @font-face {
-    font-family: 'DIN Pro';
-    src: url('DINPro.woff2') format('woff2'),
-        url('DINPro.woff') format('woff');
+    font-family: 'Questrial';
+    src: url('Questrial-Regular.woff2') format('woff2'),
+        url('Questrial-Regular.woff') format('woff');
     font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('PlayfairDisplay-Bold.woff2') format('woff2'),
+        url('PlayfairDisplay-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
