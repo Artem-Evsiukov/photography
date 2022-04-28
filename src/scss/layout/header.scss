@@ -1,10 +1,8 @@
 .header {
-  padding: 2rem 0;
-position: fixed;
   &__wrap {
     @extend %d-flex-center-between;
 
-    @include media(">=tablet") {
+    @include media('>=tablet') {
       justify-content: center;
     }
   }
@@ -14,22 +12,24 @@ position: fixed;
   margin: 0 auto;
   position: absolute;
   top: 0;
-  right: 0;
   left: 0;
-  width: 100%;
-  padding: 83px 16px 16px 16px;
-  background-color: $border;
+  width: 315px;
+  padding: 0 16px 0 16px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: 5;
   transition: $base-transition;
-  transform: translateX(110%);
+  transform: translateX(-110%);
+  background-color: $white;
 
-  @include media(">=tablet") {
-    position: static;
-    background-color: $white;
-    transform: translateX(0);
-    padding: 0;
-    width: auto;
-  }
+  //   @include media('>=full-hd') {
+  //     position: static;
+  //     background-color: $white;
+  //     transform: translateX(0);
+  //     padding: 0;
+  //     width: auto;
+  //   }
 
   &.active {
     transform: translateX(0);
@@ -39,16 +39,14 @@ position: fixed;
     font-size: 16px;
     line-height: 2;
     @extend %d-flex-column;
-
-    @include media(">=tablet") {
-      flex-direction: row;
-    }
+    width: 315px;
+    height: 100%;
   }
 
   &__item {
     & + & {
       margin-top: 15px;
-      @include media(">=tablet") {
+      @include media('>=tablet') {
         margin-left: 15px;
         margin-top: 0;
       }
@@ -68,18 +66,20 @@ position: fixed;
 }
 
 .burger {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  z-index: 6;
+  width: 5.6rem;
+  height: 5.6rem;
+  position: fixed;
+  left: 4rem;
+  top: 4.8rem;
+  z-index: 11;
   @extend %d-flex-column;
   justify-content: center;
   align-items: center;
-  @include media(">=tablet") {
-    display: none;
-  }
+  transition: $base-transition;
 
   &.active {
+    left: 35rem;
+
     span {
       position: absolute;
 
@@ -94,7 +94,7 @@ position: fixed;
       }
 
       &:nth-child(3) {
-        top: 40%;
+        top: 43%;
         left: 50%;
         transform: translate(-50%, -50%) rotate(-45deg);
       }
@@ -102,10 +102,10 @@ position: fixed;
   }
 
   span {
-    width: 80%;
-    height: 2px;
+    width: 50%;
+    height: 4px;
     border-radius: 1px;
-    background-color: $black;
+    background-color: $white;
     transition: $base-transition;
 
     &:nth-child(1) {

@@ -2,10 +2,12 @@
   font-size: 3rem;
   text-transform: uppercase;
   color: $white;
-  letter-spacing: .2rem;
   margin-bottom: 2.1rem;
   font-family: $secondary-font;
-  @include media(">=tablet") {
+  @include media(">=phone") {
+    font-size: 4rem;
+  }
+  @include media(">=tablet-lg") {
     font-size: 9.6rem;
     margin-bottom: 4.1rem;
   }
