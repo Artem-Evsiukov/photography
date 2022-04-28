@@ -4,7 +4,7 @@
   min-height: 100vh;
 }
 .swiper-slide {
-    background-position: center center;
+  background-position: center center;
   background-size: cover;
   width: 100%;
   min-height: 100vh;
@@ -14,7 +14,8 @@
   bottom: 30px !important;
   @include media('>=desktop') {
     bottom: 65px !important;
-    right: 30px !important;
+    left: -30px !important;
+    
   }
 }
 .swiper-pagination-bullet {
