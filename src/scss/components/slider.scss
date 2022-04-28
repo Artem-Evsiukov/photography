@@ -1,0 +1,32 @@
+.js-intro-slider {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+.swiper-slide {
+    background-position: center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+}
+.swiper-pagination {
+  text-align: right !important;
+  bottom: 30px !important;
+  @include media('>=desktop') {
+    bottom: 65px !important;
+    right: 30px !important;
+  }
+}
+.swiper-pagination-bullet {
+  width: 1.4rem !important;
+  height: 1.4rem !important;
+  border: 2px solid $white;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 1 !important;
+  margin: 0 1.4rem !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: $white;
+  transform: scale(1.4);
+}

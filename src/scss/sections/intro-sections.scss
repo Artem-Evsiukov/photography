@@ -1,0 +1,28 @@
+.intro-slider {
+  position: relative;
+}
+
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__text {
+    display: block;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+    @include media('>=tablet') {
+      margin-bottom: 5rem;
+    }
+  }
+}

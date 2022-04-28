@@ -1,6 +1,6 @@
 .header {
   padding: 2rem 0;
-
+position: fixed;
   &__wrap {
     @extend %d-flex-center-between;
 

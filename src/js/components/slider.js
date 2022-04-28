@@ -1,19 +1,13 @@
 const swiperSlider = (() => {
-  const accountantInit = new Swiper('.js-accountant-slider', {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    speed: 800,
+  const introSwiper = new Swiper('.js-intro-slider', {
+    slidesPerView: 1,
+    speed: 1000,
     centerInsufficientSlides: true,
+    autoplay: true,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true,
-    },
-    breakpoints: {
-      768: {
-        spaceBetween: 40,
-        slidesPerView: 3,
-      },
     },
   });
 
@@ -22,7 +16,6 @@ const swiperSlider = (() => {
   return {
     init,
   };
-
 })();
 
 export default swiperSlider;

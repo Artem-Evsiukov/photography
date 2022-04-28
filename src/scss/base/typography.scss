@@ -1,5 +1,14 @@
 .main-title {
   font-size: 3rem;
+  text-transform: uppercase;
+  color: $white;
+  letter-spacing: .2rem;
+  margin-bottom: 2.1rem;
+  font-family: $secondary-font;
+  @include media(">=tablet") {
+    font-size: 9.6rem;
+    margin-bottom: 4.1rem;
+  }
 }
 
 .section-title {
@@ -9,7 +18,7 @@
   color: $white;
   margin-bottom: 2.1rem;
   font-family: $secondary-font;
-  @include media(">=desktop") {
+  @include media(">=tablet") {
     font-size: 4.5rem;
   }
 }
