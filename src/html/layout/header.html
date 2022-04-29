@@ -10,7 +10,7 @@
             <ul class="nav__list">
                 <li class="nav__item active"><a href="">Home</a></li>
                 <li class="nav__item"><a href="">About Me</a></li>
-                <li class="nav__item" ><a href="">Portfolio</a>
+                <li class="nav__item"><a href="">Portfolio</a>
                     <span class="nav__icon">
                         <svg height="128px" id="Layer_1" style="enable-background:new 0 0 128 128;" version="1.1"
                             viewBox="0 0 128 128" width="128px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,24 @@
                 <li class="nav__item"><a href="">Services</a></li>
                 <li class="nav__item"><a href="">Contact Me</a></li>
             </ul>
+            <div class="nav-footer">
+                <ul class="nav-footer__list">
+                    <div class="nav-footer__item">
+                        <span class="nav-footer__icon">
+                            @@include('../svg-icon/phone.html')
+                        </span>
+                        <a href="tel:+18005596580" class="nav-footer__link">+1 800 559 6580</a>
+                    </div>
+                    <div class="nav-footer__item">
+                        <span class="nav-footer__icon">
+                            @@include('../svg-icon/mail.html')
+                        </span>
+                        <a href="mailto:mail@mail.mail" class="nav-footer__link">mail@mail.mail</a>
+                    </div>
+                </ul>
+            </div>
         </nav>
+
         <div class="burger js-burger-open">
             <span></span>
             <span></span>
