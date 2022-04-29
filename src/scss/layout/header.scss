@@ -119,15 +119,19 @@
             margin-top: 15px;
         }
     }
+
+    &__link{
+        color: $bg-color;
+        font-size: 1.6rem;
+        letter-spacing: 0.06em;
+    }
     &__icon{
         display: flex;
         align-items: center;
         width: 24px;
         height: 24px;
         margin-right: 15px;
-        background-color: $btn-color;
-        border-radius: 50%;
-        padding: .2rem;
+    
 
         svg{
             width: 100%;
