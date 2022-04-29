@@ -1,0 +1,19 @@
+.portfolio-sections{
+    padding: 8.5rem 0;
+}
+.portfolio-wrap{
+    padding: 0 1.2rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.portfolio {
+    
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+}

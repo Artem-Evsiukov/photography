@@ -249,7 +249,6 @@
   transition: $base-transition;
   cursor: pointer;
   @include media('>=tablet') {
-    left: 4rem;
     top: 4.8rem;
   }
 
@@ -281,7 +280,7 @@
   }
 
   span {
-    width: 50%;
+    width: 40%;
     height: 4px;
     border-radius: 1px;
     background-color: $black;

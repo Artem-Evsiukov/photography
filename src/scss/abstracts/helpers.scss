@@ -11,7 +11,7 @@
 // clearfix
 %clearfix {
   &:after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
   }
@@ -41,7 +41,6 @@
 // Credit: HTML5 Boilerplate
 
 .sr-only-focusable {
-
   &:active,
   &:focus {
     position: static;
@@ -216,8 +215,7 @@
   justify-content: center;
 }
 
-
-// grid 
+// grid
 
 .row {
   display: flex;
@@ -251,7 +249,7 @@
     width: calc(100% / 12);
   }
 
-  @include media(">=tablet") {
+  @include media('>=tablet') {
     &.col-tb-12 {
       width: 100%;
     }
@@ -277,7 +275,7 @@
     }
   }
 
-  @include media(">=desktop") {
+  @include media('>=desktop') {
     &.col-lg-12 {
       width: 100%;
     }

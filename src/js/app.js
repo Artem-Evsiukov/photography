@@ -6,11 +6,13 @@
 //import Accordion from './components/accordion';
 import burgerMenu from './components/burger-menu';
 import swiperSlider from './components/slider';
+import tabs from './components/tabs';
 
 (($) => {
   // When DOM is ready
   $(() => {
     //const accordions = new Accordion();
+    tabs.init();
     burgerMenu.init();
     swiperSlider.init();
   });
