@@ -1,0 +1,125 @@
+.contact-sections{
+    padding-top: 85px;
+    // padding-bottom: 85px; 
+    @include media("<=tablet-lg"){
+        padding-top: 65px;
+        // padding-bottom: 65px;
+    }  
+    @include media("<=phone-lg"){
+        padding-top: 45px;
+        // padding-bottom: 45px;
+    }
+    @include media("<=phone"){
+        padding-top: 25px;
+        // padding-bottom: 25px;
+    }
+    .map__wrap{
+        padding-top: 98px; 
+    }
+}
+.contact{
+    &__wrap{
+        flex-direction: row;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__form{
+        width: 60%;
+    }
+    .col{
+        .form-group{
+            position: relative;
+            margin-bottom: 30px;
+            label{
+                position: absolute;
+                color: #fff;
+                font-size: 1.3em;
+                transform: translate(0,50%);
+                top: 10px;
+                left: 16px;
+            }
+        }
+        input{
+            width: 100%;
+            background: none;
+            border: 1px solid #ced4da;
+            height: 50px;
+            line-height: 28px;
+            font-family: $primary-font;
+            color: #FFF;
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
+        textarea{
+            width: 100%;
+            background: none;
+            border: 1px solid #ced4da;
+            font-family: $primary-font;
+            color: #FFF;
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
+        &.col-6{
+            padding: 0 12px;
+            &:first-child{
+                padding-left: 0 !important;
+            }
+            &:last-child{
+                padding-right: 0 !important;
+            }
+        }
+    }
+    &__info{
+        width: 30%;
+        font-family: $primary-font;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
+        a{
+            color: #bebebe;
+            margin-top: 16px;
+            &:first-child{
+                margin-top: 0;
+            }
+            i{
+                padding-right: 5px;
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            margin-top: 35px;
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #434345;
+                border-radius: 50%;
+                width: 4rem;
+                height: 4rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-right: 15px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                &:hover{
+                    background-color: #0956b5;
+                }
+                a{
+                    color:#FFF;
+                }
+            }
+        }
+    }
+    &__text{
+        width: 100%;
+        font-family: $primary-font;
+        color: #bebebe;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        margin-top: 50px;
+    }
+}

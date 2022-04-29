@@ -34,7 +34,7 @@
   margin-top: 24px;
   li{
     &::after{
-      content: ' / ';
+      content: ' /\00a0';
       font-family: $primary-font;
       font-size: 1.6rem;
       font-weight: 400;
