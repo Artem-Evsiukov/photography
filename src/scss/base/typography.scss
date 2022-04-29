@@ -25,6 +25,41 @@
   }
 }
 
+.breadcrumbs{
+  display: flex;
+  flex-direction: row;
+  li{
+    &::after{
+      content: ' / ';
+      font-family: $primary-font;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #bebebe;
+    }
+    a{
+      font-family: $primary-font;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #bebebe;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  li:last-child{
+    &::after{
+      content: none;
+    }
+    a{
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 .base-text {
   font-size: 1.6rem;
 }
