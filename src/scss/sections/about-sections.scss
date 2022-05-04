@@ -1,22 +1,59 @@
 .about-sections{
     padding-top: 85px;
-    padding-bottom: 85px;   
+    padding-bottom: 85px; 
+    @include media("<=tablet-lg"){
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }  
+    @include media("<=phone-lg"){
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+    @include media("<=phone"){
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
 }
 .about{
     &__wrap{
-        display: flex;
         flex-direction: row;
         margin-top: 66px;
+        display: flex;
+        @include media("<=tablet-lg"){
+            display: block;
+        }
+        @include media("<=phone-lg"){
+            display: flex;
+            flex-direction: column;
+            margin-top: 16px
+        }
     }
     &__col{
-        width: 50%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 50%;
+        margin-right:0px;
+        @include media("<=tablet-lg"){
+            width: 250px;
+            margin-right: 2.5vw;
+            margin-bottom: 2.5vw;
+            float: left;
+        }
+        @include media("<=phone-lg"){
+            width: 100%;
+            margin-right: 0;
+        }
     }
     &__img{
         width: 442px;
-        height: 480px;
+        @include media("<=tablet-lg"){
+            width: 100%;
+        }
+        @include media("<=phone-lg"){
+            width: 63%;
+        }
+        height: auto;
         margin-bottom: 34px;
         img{
             width: 100%;
@@ -29,10 +66,16 @@
         padding: 0 140px;
         justify-content: flex-end;
         display: flex;
+        @include media("<=tablet-lg"){
+            padding: 0;
+            justify-content: center;
+        }
     }
     &__text{
         width: 50%;
-        // flex: 1;
+        @include media("<=tablet-lg"){
+            width: auto;
+        }
         font-family: $primary-font;
         color: #bebebe;
         font-size: 1.6rem;
