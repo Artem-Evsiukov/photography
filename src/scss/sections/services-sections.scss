@@ -1,0 +1,83 @@
+.services-sections{
+
+}
+.services{
+    &__wrap{
+        display: flex;
+        flex-direction: row;
+        padding-top: 66px;
+        padding-bottom: 70px;
+    }
+    &__text{
+        width: 25%;
+        font-family: $primary-font;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $services-text;
+        padding-right: 15px;
+    }
+    &__gallery{
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &-block{
+            width: 33%;
+            padding: 0 15px 15px 15px;
+            position: relative;
+            @include media("<widescreen"){
+                width: 50%;
+            }
+            @include media("<=tablet-lg"){
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+    &__item{
+        &-description{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            top: 15%;
+            left: 6%;
+            h2{
+                padding: 3px 15px;
+                background: $gallery-title-bg;
+                line-height: 1.2;
+                font-size: 2.1rem;
+                font-weight: 300;
+                font-family: $secondary-font;
+                color:$white;
+                @include media("<widescreen"){
+                    font-size: 3rem;
+                }
+            }
+            ul{
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                li{
+                    margin-bottom: 0.55rem;
+                    background-color: $white;
+                    padding: 6.4px 16px;
+                    text-transform: none;
+                    font-weight: 500;
+                    color:$bg-link;
+                    line-height: 1.5;
+                    font-family: $primary-font;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        &-img{
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
