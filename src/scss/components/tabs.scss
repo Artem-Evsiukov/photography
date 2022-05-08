@@ -81,7 +81,7 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(20, 100vw);
-    grid-gap: 140px 24px;
+    grid-gap: 200px 24px;
     @include media('>=phone-lg') {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(11, 50vw);
@@ -94,10 +94,13 @@
     }
   }
   &__col {
+    display: block;
     position: relative;
     cursor: pointer;
-    overflow: hidden;
-   
+    @include media('>=desktop') {
+      overflow: hidden;
+    }
+
     &--1 {
       @include media('>=desktop') {
         grid-column-start: 1;
@@ -269,29 +272,30 @@
       object-fit: cover;
       height: 100%;
     }
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-color: rgba($btn-color, 0.5);
-      opacity: 0;
-      transition: $base-transition;
-      transition-delay: .3s;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      transition: $base-transition;
-      top: 0%;
-      right: -50%;
-      background-color: rgba($white, 0.6);
-      width: 100%;
-      height: 100%;
-      transform: skewX(32deg);
-      opacity: 0;
+    @include media('>=desktop') {
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba($btn-color, 0.5);
+        opacity: 0;
+        transition: $base-transition;
+        transition-delay: 0.3s;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        transition: $base-transition;
+        top: 0%;
+        right: 0;
+        background-color: rgba($white, 0.6);
+        width: 100%;
+        height: 100%;
+        transform: skewX(32deg) translateX(200%);
+        opacity: 0;
+      }
     }
 
     &:hover {
@@ -302,29 +306,29 @@
         .tabs__wrap-text {
           opacity: 1;
         }
-      }
 
-      &::after {
-        opacity: 1;
-        animation-name: line;
-        animation-duration: 1s;
-        animation-timing-function: linear;
-        animation-iteration-count: 1;
-        animation-direction: normal;
-        animation-play-state: running;
-        animation-delay: 0s;
-        animation-fill-mode: forwards;
-      }
+        &::after {
+          opacity: 1;
+          animation-name: line;
+          animation-duration: 1s;
+          animation-timing-function: linear;
+          animation-iteration-count: 1;
+          animation-direction: normal;
+          animation-play-state: running;
+          animation-delay: 0s;
+          animation-fill-mode: forwards;
+        }
 
-      @keyframes line {
-        0% {
-          right: -200%;
-        }
-        50% {
-          right: 50%;
-        }
-        100% {
-          right: 200%;
+        @keyframes line {
+          0% {
+            transform: skewX(32deg) translateX(200%);
+          }
+          50% {
+            transform: skewX(32deg) translateX(-50%);
+          }
+          100% {
+            transform: skewX(32deg) translateX(-200%);
+          }
         }
       }
     }
