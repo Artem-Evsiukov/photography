@@ -1,5 +1,17 @@
-.services-sections{
-
+.git-sections{
+    padding-top: 85px;
+    @include media("<=tablet-lg"){
+        padding-top: 65px;
+    }  
+    @include media("<=phone-lg"){
+        padding-top: 45px;
+    }
+    @include media("<=phone"){
+        padding-top: 25px;
+    }
+    .map__wrap{
+        padding-top: 98px; 
+    }
 }
 .services{
     &__wrap{
@@ -32,7 +44,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         &-block{
-            padding-top: 41px !important;
+            @include media("<=tablet-lg"){
+                padding-top: 41px !important;
+            }
             width: 33%;
             padding: 0 15px 15px 0px;
             position: relative;
