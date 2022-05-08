@@ -26,16 +26,18 @@
     &__gallery{
         @include media("<=tablet-lg"){
             width: 100%;
-            padding-top: 41px;
         }
         width: 75%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         &-block{
+            padding-top: 41px !important;
             width: 33%;
             padding: 0 15px 15px 0px;
             position: relative;
+            display: flex;
+            flex-direction: column-reverse;
             @include media("<widescreen"){
                 width: 50%;
             }
@@ -43,28 +45,41 @@
                 width: 100%;
                 padding: 0;
             }
-            @include meida(">tablet-lg"){
-                &:hover{
-                    .services__block-title{
-                        transform: translate3d(0, 35px, 0) !important;
-                        opacity: 1 !important;
-                    }
-                    .services__item-description ul{
-                        li{
-                            &:nth-child(1){
-                                transform: translate3d(35px, 0px, 0);
-                            }
-                            &:nth-child(2){
-                                transform: translate3d(35px, 0px, 0);
-                            }
-                            &:nth-child(3){
-                                transform: translate3d(35px, 0px, 0);
-                            }
-                        }
-                        opacity: 1 !important;
+            &:hover{
+                .services__block-title{
+                    transform: translate3d(0, 35px, 0) !important;
+                    opacity: 1 !important;
+                    @include media("<=tablet-lg"){
+                        transform: none !important;
+                        opacity: unset !important;
                     }
                 }
+                .services__item-description ul{
+                    li{
+                        &:nth-child(1){
+                            transform: translate3d(35px, 0px, 0);
+                            @include media("<=tablet-lg"){
+                                transform: none !important;
+                            }
+                        }
+                        &:nth-child(2){
+                            transform: translate3d(35px, 0px, 0);
+                            @include media("<=tablet-lg"){
+                                transform: none !important;
+                            }
+                        }
+                        &:nth-child(3){
+                            transform: translate3d(35px, 0px, 0);
+                            @include media("<=tablet-lg"){
+                                transform: none !important;
+                            }
+                        }
+                    }
+                    opacity: 1 !important;
+                }
             }
+            // @include media(">tablet-lg"){
+            // }
         }
     }
     &__item{
@@ -78,6 +93,12 @@
             top: 0;
             left: 0;
             overflow: hidden;
+            @include media("<=tablet-lg"){
+                position: relative;
+                width: auto;
+                height: auto;
+                overflow: auto;
+            }
             h2{
                 padding: 3px 15px;
                 background: $bg-color;
@@ -97,6 +118,11 @@
                 top: 80px;
                 position: absolute;
                 opacity: 0;
+                @include media("<=tablet-lg"){
+                    opacity: 1;
+                    top: 0;
+                    position: relative;
+                }
                 li{
                     margin-bottom: 0.55rem;
                     background-color: $white;
@@ -107,19 +133,27 @@
                     line-height: 1.5;
                     font-family: $primary-font;
                     font-size: 1.4rem;
-                    @include meida(">tablet-lg"){
-                        &:nth-child(1){
-                            transform: translate3d(-191px, 0px, 0);
-                            transition: transform 0.35s, opacity 0.35s;
+                    &:nth-child(1){
+                        @include media("<=tablet-lg"){
+                            transform: none;
+                            margin-bottom: 0.88rem;
                         }
-                        &:nth-child(2){
-                            transform: translate3d(-191px, 0px, 0);
-                            transition: transform 0.55s, opacity 0.35s;
+                        transform: translate3d(-191px, 0px, 0);
+                        transition: transform 0.35s, opacity 0.35s;
+                    }
+                    &:nth-child(2){
+                        @include media("<=tablet-lg"){
+                            transform: none;
                         }
-                        &:nth-child(3){
-                            transform: translate3d(-191px, 0px, 0);
-                            transition: transform 0.75s, opacity 0.35s;
+                        transform: translate3d(-191px, 0px, 0);
+                        transition: transform 0.55s, opacity 0.35s;
+                    }
+                    &:nth-child(3){
+                        @include media("<=tablet-lg"){
+                            transform: none;
                         }
+                        transform: translate3d(-191px, 0px, 0);
+                        transition: transform 0.75s, opacity 0.35s;
                     }
                 }
             }
@@ -138,6 +172,14 @@
             opacity: 0;
             position: relative;
             left: 35px;
+            @include media("<=tablet-lg"){
+                opacity: 1 !important;
+                transform: none !important;
+                width: 100%;
+                position: initial;
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 }
