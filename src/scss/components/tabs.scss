@@ -358,7 +358,7 @@
   &__text {
     margin-bottom: 10px;
     font-size: 15px;
-    color: $text-color;
+    color: $services-text;
     @include media('>=desktop') {
       color: $white;
     }

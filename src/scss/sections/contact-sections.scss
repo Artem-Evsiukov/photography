@@ -23,9 +23,55 @@
         margin-top: 50px;
         display: flex;
         justify-content: space-between;
+        @include media("<=tablet"){
+            flex-direction: column;
+        }
     }
     &__form{
         width: 60%;
+        @include media("<=tablet"){
+            width: 100%;
+            &-button{
+                display: flex;
+                justify-content: center;
+                padding-bottom: 50px;
+            }
+        }
+        .more-tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .col{
+                width: 48%;
+            }
+            @include media("<=tablet"){
+                flex-direction: column;
+                .col{
+                    width: 100%;
+                }   
+            }
+        }
+        label{
+            transition: all 0.3s ease;
+            // left: 16px;
+        }
+        .focus{
+            color: #e50a0a !important;
+            top: 3px !important;
+            transform: scale(0.8) translateY(0) !important;
+            // left: 10px;
+        }
+        .validation-error{
+            color: #e50a0a;
+            margin-top: 2px;
+            display: none;
+            &.active{
+                display: block !important;
+            }
+        }
+        .danger{
+            border-color: #f54b0f !important;
+        }
     }
     .col{
         .form-group{
@@ -72,6 +118,12 @@
     }
     &__info{
         width: 30%;
+        @include media('<=tablet-lg'){
+            width: 38%;
+        }
+        @include media("<=tablet"){
+            width: 100%;
+        }
         font-family: $primary-font;
         font-size: 1.6rem;
         line-height: 1.5;
@@ -111,6 +163,11 @@
                 a{
                     color:#FFF;
                 }
+            }
+        }
+        &-social{
+            @include media("<=tablet"){
+                justify-content: center;
             }
         }
     }
