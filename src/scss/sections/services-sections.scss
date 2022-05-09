@@ -1,199 +1,199 @@
-.git-sections{
-    padding-top: 85px;
-    @include media("<=tablet-lg"){
-        padding-top: 65px;
-    }  
-    @include media("<=phone-lg"){
-        padding-top: 45px;
-    }
-    @include media("<=phone"){
-        padding-top: 25px;
-    }
-    .map__wrap{
-        padding-top: 98px; 
-    }
+.git-sections {
+  padding-top: 85px;
+  @include media('<=tablet-lg') {
+    padding-top: 65px;
+  }
+  @include media('<=phone-lg') {
+    padding-top: 45px;
+  }
+  @include media('<=phone') {
+    padding-top: 25px;
+  }
+  .map__wrap {
+    padding-top: 98px;
+  }
 }
-.services{
-    &__wrap{
-        display: flex;
-        flex-direction: row;
-        padding-top: 66px;
-        padding-bottom: 70px;
-        @include media("<=tablet-lg"){
-            flex-direction: column;
-        }
+.services {
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    padding-top: 66px;
+    padding-bottom: 70px;
+    @include media('<=tablet-lg') {
+      flex-direction: column;
     }
-    &__text{
-        width: 25%;
-        @include media("<=tablet-lg"){
-            width: 100%;
-        }
-        font-family: $primary-font;
-        font-size: 1.8rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: $services-text;
-        padding-right: 15px;
+  }
+  &__text {
+    width: 25%;
+    @include media('<=tablet-lg') {
+      width: 100%;
     }
-    &__gallery{
-        @include media("<=tablet-lg"){
-            width: 100%;
-        }
-        width: 75%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        &-block{
-            @include media("<=tablet-lg"){
-                padding-top: 41px !important;
-            }
-            width: 33%;
-            padding: 0 15px 15px 0px;
-            position: relative;
-            display: flex;
-            flex-direction: column-reverse;
-            @include media("<widescreen"){
-                width: 50%;
-            }
-            @include media("<=tablet-lg"){
-                width: 100%;
-                padding: 0;
-            }
-            &:hover{
-                .services__block-title{
-                    transform: translate3d(0, 35px, 0) !important;
-                    opacity: 1 !important;
-                    @include media("<=tablet-lg"){
-                        transform: none !important;
-                        opacity: unset !important;
-                    }
-                }
-                .services__item-description ul{
-                    li{
-                        &:nth-child(1){
-                            transform: translate3d(35px, 0px, 0);
-                            @include media("<=tablet-lg"){
-                                transform: none !important;
-                            }
-                        }
-                        &:nth-child(2){
-                            transform: translate3d(35px, 0px, 0);
-                            @include media("<=tablet-lg"){
-                                transform: none !important;
-                            }
-                        }
-                        &:nth-child(3){
-                            transform: translate3d(35px, 0px, 0);
-                            @include media("<=tablet-lg"){
-                                transform: none !important;
-                            }
-                        }
-                    }
-                    opacity: 1 !important;
-                }
-            }
-            // @include media(">tablet-lg"){
-            // }
-        }
+    font-family: $primary-font;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $services-text;
+    padding-right: 15px;
+  }
+  &__gallery {
+    @include media('<=tablet-lg') {
+      width: 100%;
     }
-    &__item{
-        &-description{
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            align-items: baseline;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-            @include media("<=tablet-lg"){
-                position: relative;
-                width: auto;
-                height: auto;
-                overflow: auto;
-            }
-            h2{
-                padding: 3px 15px;
-                background: $bg-color;
-                line-height: 1.2;
-                font-size: 2.1rem;
-                font-weight: 300;
-                font-family: $secondary-font;
-                color:$white;
-                @include media("<widescreen"){
-                    font-size: 3rem;
-                }
-            }
-            ul{
-                display: flex;
-                flex-direction: column;
-                align-items: baseline;
-                top: 80px;
-                position: absolute;
-                opacity: 0;
-                @include media("<=tablet-lg"){
-                    opacity: 1;
-                    top: 0;
-                    position: relative;
-                }
-                li{
-                    margin-bottom: 0.55rem;
-                    background-color: $white;
-                    padding: 6.4px 16px;
-                    text-transform: none;
-                    font-weight: 500;
-                    color:$bg-link;
-                    line-height: 1.5;
-                    font-family: $primary-font;
-                    font-size: 1.4rem;
-                    &:nth-child(1){
-                        @include media("<=tablet-lg"){
-                            transform: none;
-                            margin-bottom: 0.88rem;
-                        }
-                        transform: translate3d(-191px, 0px, 0);
-                        transition: transform 0.35s, opacity 0.35s;
-                    }
-                    &:nth-child(2){
-                        @include media("<=tablet-lg"){
-                            transform: none;
-                        }
-                        transform: translate3d(-191px, 0px, 0);
-                        transition: transform 0.55s, opacity 0.35s;
-                    }
-                    &:nth-child(3){
-                        @include media("<=tablet-lg"){
-                            transform: none;
-                        }
-                        transform: translate3d(-191px, 0px, 0);
-                        transition: transform 0.75s, opacity 0.35s;
-                    }
-                }
-            }
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &-block {
+      @include media('<=tablet-lg') {
+        padding-top: 41px !important;
+      }
+      width: 33%;
+      padding: 0 15px 15px 0px;
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      @include media('<widescreen') {
+        width: 50%;
+      }
+      @include media('<=tablet-lg') {
+        width: 100%;
+        padding: 0;
+      }
+      &:hover {
+        .services__block-title {
+          transform: translate3d(0, 35px, 0) !important;
+          opacity: 1 !important;
+          @include media('<=tablet-lg') {
+            transform: none !important;
+            opacity: unset !important;
+          }
         }
-        &-img{
-            img{
-                width: 100%;
-                height: auto;
-            }
-        }
-    }
-    &__block{
-        &-title{
-            transform: translate3d(0, -42px, 0);
-            transition: transform 0.35s, opacity 0.35s;
-            opacity: 0;
-            position: relative;
-            left: 35px;
-            @include media("<=tablet-lg"){
-                opacity: 1 !important;
+        .services__item-description ul {
+          li {
+            &:nth-child(1) {
+              transform: translate3d(35px, 0px, 0);
+              @include media('<=tablet-lg') {
                 transform: none !important;
-                width: 100%;
-                position: initial;
-                display: flex;
-                justify-content: center;
+              }
             }
+            &:nth-child(2) {
+              transform: translate3d(35px, 0px, 0);
+              @include media('<=tablet-lg') {
+                transform: none !important;
+              }
+            }
+            &:nth-child(3) {
+              transform: translate3d(35px, 0px, 0);
+              @include media('<=tablet-lg') {
+                transform: none !important;
+              }
+            }
+          }
+          opacity: 1 !important;
         }
+      }
+      // @include media(">tablet-lg"){
+      // }
     }
+  }
+  &__item {
+    &-description {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      @include media('<=tablet-lg') {
+        position: relative;
+        width: auto;
+        height: auto;
+        overflow: auto;
+      }
+      h2 {
+        padding: 3px 15px;
+        background: $bg-color;
+        line-height: 1.2;
+        font-size: 2.1rem;
+        font-weight: 300;
+        font-family: $secondary-font;
+        color: $white;
+        @include media('<widescreen') {
+          font-size: 3rem;
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        top: 80px;
+        position: absolute;
+        opacity: 0;
+        @include media('<=tablet-lg') {
+          opacity: 1;
+          top: 0;
+          position: relative;
+        }
+        li {
+          margin-bottom: 0.55rem;
+          background-color: $white;
+          padding: 6.4px 16px;
+          text-transform: none;
+          font-weight: 500;
+          color: $bg-link;
+          line-height: 1.5;
+          font-family: $primary-font;
+          font-size: 1.4rem;
+          &:nth-child(1) {
+            @include media('<=tablet-lg') {
+              transform: none;
+              margin-bottom: 0.88rem;
+            }
+            transform: translate3d(-191px, 0px, 0);
+            transition: transform 0.35s, opacity 0.35s;
+          }
+          &:nth-child(2) {
+            @include media('<=tablet-lg') {
+              transform: none;
+            }
+            transform: translate3d(-191px, 0px, 0);
+            transition: transform 0.55s, opacity 0.35s;
+          }
+          &:nth-child(3) {
+            @include media('<=tablet-lg') {
+              transform: none;
+            }
+            transform: translate3d(-191px, 0px, 0);
+            transition: transform 0.75s, opacity 0.35s;
+          }
+        }
+      }
+    }
+    &-img {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &__block {
+    &-title {
+      transform: translate3d(0, -42px, 0);
+      transition: transform 0.35s, opacity 0.35s;
+      opacity: 0;
+      position: relative;
+      left: 35px;
+      @include media('<=tablet-lg') {
+        opacity: 1 !important;
+        transform: none !important;
+        width: 100%;
+        position: initial;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
 }
