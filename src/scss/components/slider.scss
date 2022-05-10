@@ -6,6 +6,7 @@
 .swiper-slide {
   background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
 }
@@ -15,7 +16,6 @@
   @include media('>=desktop') {
     bottom: 65px !important;
     left: -30px !important;
-    
   }
 }
 .swiper-pagination-bullet {
@@ -30,4 +30,16 @@
 .swiper-pagination-bullet-active {
   background-color: $white;
   transform: scale(1.4);
+}
+.js-portfolio-slider {
+  position: relative;
+  overflow: hidden;
+
+  .swiper-slide {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+  }
 }

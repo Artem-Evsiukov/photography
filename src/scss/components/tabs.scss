@@ -24,11 +24,15 @@
     }
   }
   &__list {
-    border-left: 1px solid #434345;
-    margin-bottom: 0;
-    padding: 0;
-    border-bottom: none;
-    transition: $base-transition;
+    display: none;
+    @include media('>=desktop') {
+      display: block;
+      border-left: 1px solid #434345;
+      margin-bottom: 0;
+      padding: 0;
+      border-bottom: none;
+      transition: $base-transition;
+    }
   }
 
   &__btn {
